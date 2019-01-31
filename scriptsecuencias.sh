@@ -16,7 +16,7 @@ link="https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&re
 #cúantas veces aparece en ellas la secuencia tgca
 for i in NC_ 000007.14 NC_000017.11 NC_ 000012.12 NC_000004.12 NC_000009.12
 do curl -s $link$i > secuencia$i
-grep tgca secuencia$i | wc -l >> conteotgca
+grep -o tgca secuencia$i | wc -l >> conteotgca
 done
 
 
